@@ -147,3 +147,10 @@ localisation:
   localisationReady: yes
   availableLanguages:
     - en
+    
+it:
+  countryExtensionVersion: '0.2'
+  riuso:
+    codiceIPA: arpa
+  
+ 
