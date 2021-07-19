@@ -1,7 +1,7 @@
 publiccodeYmlVersion: "0.2"
 
 name: get5p
-url: "https://gitlab.arpae.it/arpae/get5p"
+url: "https://github.com/Arpae-it/get5p"
 softwareVersion: "dev"    # Optional
 releaseDate: "2021-04-08"
 platforms:
