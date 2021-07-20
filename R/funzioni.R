@@ -13,7 +13,8 @@ listlast<-function(month,year){
 
 fullpath<-paste0("https://scihub.copernicus.eu/catalogueview/S5P/",year,"/",month,"/")
 lista<-xml2::read_html(fullpath)
-nodes<-trimws(rvest::html_text(rvest::html_nodes(lista, "a")))
+
+nodes<-rvest::html_attr(rvest::html_nodes(lista, "a"), "href")
 return (nodes[6:length(nodes)])}
 
 #' Get a list of 5p products
@@ -51,8 +52,9 @@ return(leggoresult)
 get5p<-function(month,year,number,id,fn)
   {
   leggo<-get5plist(month,year,number)
-  p2<-paste0("https://s5pguest:s5pguest@s5phub.copernicus.eu/dhus/odata/v1/Products('",leggo$Id[id],"')/$value")
-  download.file(p2,as.character(leggo$Name[id]))
+ 
+  p2<-paste0("https://s5pguest:s5pguest@s5phub.copernicus.eu/dhus/odata/v1/Products('",leggo$Id[as.numeric(id)],"')/$value")
+  download.file(p2,as.character(fn))
 }
 
 
