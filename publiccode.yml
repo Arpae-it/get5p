@@ -132,7 +132,7 @@ description:
         
 
     features:
-       - Downloads and preview .nc files from ESA Copernicus 5p hub
+       - Downloading and previewing .nc files from ESA Copernicus 5p hub
 
 legal:
   license: AGPL-3.0-or-later
